@@ -2,7 +2,7 @@
 title: 
 description: 
 tags:
-enableToc: false
+enableToc: true
 created: {{date}}
 updated: {{date}}
 publish: false
