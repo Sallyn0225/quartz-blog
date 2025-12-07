@@ -4,7 +4,7 @@ description: 这周去取了日元，还把有问题的手机电池换了。同�
 tags:
 - 周报
 date: 2025-12-07
-draft: true
+draft: false
 ---
 
 ## 出发moiw之前的准备
