@@ -1,6 +1,6 @@
 ---
 title: 码凌书片·110·做了一个仿sbti的283ti
-description: 
+description: 这周依旧是折腾llm，盼着ds新版本、逆了一个opus-4-6，炼了个冬优子的skill。做了个283ti在国内大帅圈小火了一下。然后和朋友去了深大一趟。
 tags:
 - 周报
 date: 2026-04-12
