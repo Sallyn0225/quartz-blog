@@ -1,6 +1,6 @@
 ---
 title: 码凌书片·109·做了一些vibe coding的视频
-description:
+description: 这周我做了一系列vibe coding的视频，并且其中有一个用玩机器当封面的视频数据不错；另外发现了一个叫recordly的开源录屏软件
 tags:
 - 周报
 date: 2026-04-05
