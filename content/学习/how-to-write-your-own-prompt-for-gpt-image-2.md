@@ -80,7 +80,7 @@ GPT-Image-2 也出了有一段时间了。从一开始制作各种IP的联动图
 
 |                                测试用例1                                 |                                测试用例2                                 |
 |:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
-| ![[how-to-write-your-own-prompt-for-gpt-image-2-20260424_23-45-12.webp]] | ![[how-to-write-your-own-prompt-for-gpt-image-2-20260424_23-45-28.webp]] |
+| ![[how-to-write-your-own-prompt-for-gpt-image-2-20260424_23-52-11.webp]] | ![[how-to-write-your-own-prompt-for-gpt-image-2-20260424_23-45-28.webp]] |
 
 ### 黑蓝红三色
 
