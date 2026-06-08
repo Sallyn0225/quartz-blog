@@ -1,6 +1,6 @@
 ---
 title: 码凌书片·117·做了一个现地座位查看网站
-description: 
+description: 这周上线了我的现地座席查看网站seatview，然后在回学校之前和朋友约了一顿饭，就当是送行饭了。
 tags:
 - 周报
 date: 2026-05-31
