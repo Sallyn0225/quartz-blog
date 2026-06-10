@@ -1,5 +1,6 @@
 {
-  "buildCommand": "npx quartz plugin install && npx quartz build",
+  "installCommand": "npm ci",
+  "buildCommand": "npx quartz plugin install --concurrency 2 && npx quartz build",
   "outputDirectory": "public",
   "cleanUrls": true
 }
