@@ -354,6 +354,7 @@ iframe.pdf {
 }
 
 footer {
+  box-sizing: border-box;
   background: var(--surface-dark);
   color: #a09d96;
   border-radius: var(--radius-lg);
