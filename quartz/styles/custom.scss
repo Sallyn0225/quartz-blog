@@ -8,8 +8,6 @@
   --surface-strong: #e8e0d2;
   --surface-dark: #181715;
   --surface-dark-elevated: #252320;
-  --surface-dark-soft: #1f1e1b;
-  --accent-amber: #e8a55a;
   --hairline-soft: #ebe6df;
   --radius-md: 8px;
   --radius-lg: 12px;
@@ -299,8 +297,10 @@ blockquote {
 }
 
 .callout {
-  background: color-mix(in srgb, var(--surface-card) 72%, var(--light));
-  border: 1px solid var(--lightgray);
+  // keep the warm editorial card, but restore the per-type colour signal
+  // (--color/--border are set by callouts.scss for each callout type)
+  background: color-mix(in srgb, var(--color) 6%, var(--surface-card));
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-hairline);
 }
 
