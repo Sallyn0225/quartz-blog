@@ -1,3 +1,400 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+:root {
+  --surface-soft: #f5f0e8;
+  --surface-card: #efe9de;
+  --surface-strong: #e8e0d2;
+  --surface-dark: #181715;
+  --surface-dark-elevated: #252320;
+  --surface-dark-soft: #1f1e1b;
+  --accent-amber: #e8a55a;
+  --hairline-soft: #ebe6df;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-hairline: 0 1px 2px rgba(20, 20, 19, 0.04);
+}
+
+:root[saved-theme="dark"] {
+  --surface-soft: #1f1e1b;
+  --surface-card: #252320;
+  --surface-strong: #302d28;
+  --hairline-soft: #332f2a;
+  --shadow-hairline: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+body {
+  background:
+    linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--lightgray) 30%, transparent) 1px,
+        transparent 1px
+      )
+      0 0 / 42px 42px,
+    var(--light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.page > #quartz-body .center {
+  padding-top: 0.15rem;
+}
+
+.page > #quartz-body .sidebar {
+  color: var(--darkgray);
+}
+
+.page-title,
+.page-title a,
+.sidebar h2,
+.sidebar h3 {
+  color: var(--dark);
+}
+
+.page-title {
+  font-family: var(--headerFont);
+  font-weight: 500;
+}
+
+.popover-hint article,
+.page-footer,
+.section-li,
+.transclude,
+.callout,
+.table-container > table {
+  border-radius: var(--radius-lg);
+}
+
+.page > #quartz-body .sidebar.left,
+.page > #quartz-body .sidebar.right {
+  @media all and ($desktop) {
+    padding-top: 4.5rem;
+  }
+}
+
+.search > .search-button,
+.darkmode,
+.readermode,
+.explorer .mobile-explorer,
+button.mobile-explorer,
+button.desktop-explorer,
+button.toc-header {
+  border-radius: var(--radius-md);
+}
+
+.search > .search-button {
+  min-height: 2.25rem;
+  background: var(--surface-soft);
+  border: 1px solid var(--lightgray);
+  box-shadow: var(--shadow-hairline);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--surface-card);
+    border-color: var(--secondary);
+    outline: none;
+  }
+
+  & > p {
+    color: var(--darkgray);
+    font-weight: 500;
+  }
+
+  & svg .search-path {
+    stroke: var(--secondary);
+  }
+}
+
+.darkmode,
+.readermode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--surface-soft);
+  border: 1px solid var(--lightgray);
+  box-shadow: var(--shadow-hairline);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--surface-card);
+    border-color: var(--secondary);
+    outline: none;
+  }
+
+  & svg {
+    left: calc(50% - 10px);
+    fill: var(--secondary);
+    stroke: var(--secondary);
+  }
+}
+
+.explorer,
+.toc,
+.backlinks,
+.graph {
+  background: color-mix(in srgb, var(--surface-soft) 92%, transparent);
+  border: 1px solid var(--lightgray);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hairline);
+  padding: 0.9rem;
+}
+
+.explorer {
+  max-height: calc(100vh - 7rem);
+}
+
+.explorer-content,
+ul.toc-content.overflow,
+.backlinks > ul.overflow {
+  scrollbar-color: var(--gray) transparent;
+}
+
+.explorer-content ul li > a,
+.backlinks > ul.overflow > li > a,
+ul.toc-content.overflow > li > a {
+  border-radius: 6px;
+  display: inline-block;
+  padding: 0.05rem 0.25rem;
+}
+
+.explorer-content ul li > a:hover,
+.explorer-content ul li > a.active,
+.backlinks > ul.overflow > li > a:hover,
+ul.toc-content.overflow > li > a:hover,
+ul.toc-content.overflow > li > a.in-view {
+  color: var(--secondary);
+  opacity: 1;
+  background: var(--highlight);
+}
+
+.folder-container div > a,
+.folder-container div > button span,
+.folder-icon {
+  color: var(--secondary);
+}
+
+.explorer-content .folder-outer > ul {
+  border-left-color: var(--lightgray);
+}
+
+button.mobile-explorer,
+button.desktop-explorer,
+button.toc-header {
+  width: 100%;
+  color: var(--dark);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--secondary);
+    outline: none;
+  }
+}
+
+.graph > .graph-outer {
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  border-color: var(--lightgray);
+}
+
+.graph > .graph-outer > .global-graph-icon {
+  background: color-mix(in srgb, var(--light) 80%, transparent);
+  border: 1px solid var(--lightgray);
+  color: var(--secondary);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--surface-strong);
+    outline: none;
+  }
+}
+
+.graph > .global-graph-outer,
+.search > .search-container {
+  background: color-mix(in srgb, var(--surface-dark) 36%, transparent);
+}
+
+.graph > .global-graph-outer > .global-graph-container,
+.search > .search-container > .search-space > *:not(.ghost-text):not(.tag-suggestions),
+.search > .search-container > .search-space > .tag-suggestions,
+.popover > .popover-inner {
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 48px rgba(20, 20, 19, 0.14);
+}
+
+.search > .search-container > .search-space > input {
+  background: var(--light);
+  border-color: var(--lightgray);
+  color: var(--dark);
+  min-height: 3rem;
+
+  &:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--secondary) 18%, transparent);
+  }
+}
+
+.search > .search-container > .search-space > .search-layout > .results-container .result-card {
+  border-bottom-color: var(--lightgray);
+}
+
+.search
+  > .search-container
+  > .search-space
+  > .search-layout
+  > .results-container
+  .result-card:hover,
+.search
+  > .search-container
+  > .search-space
+  > .search-layout
+  > .results-container
+  .result-card:focus,
+.search
+  > .search-container
+  > .search-space
+  > .search-layout
+  > .results-container
+  .result-card.focus,
+.search > .search-container > .search-space > .tag-suggestions > .tag-suggestion-item:hover,
+.search > .search-container > .search-space > .tag-suggestions > .tag-suggestion-item.active {
+  background: var(--surface-card);
+}
+
+a.internal {
+  color: var(--tertiary);
+  background: color-mix(in srgb, var(--secondary) 14%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--secondary) 28%, transparent);
+}
+
+a.internal.tag-link,
+ul.tags a.internal {
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  background: var(--surface-card);
+  border: 1px solid var(--lightgray);
+}
+
+blockquote {
+  background: color-mix(in srgb, var(--secondary) 9%, transparent);
+  border-left-color: var(--secondary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 0.7rem 1rem;
+}
+
+.callout {
+  background: color-mix(in srgb, var(--surface-card) 72%, var(--light));
+  border: 1px solid var(--lightgray);
+  box-shadow: var(--shadow-hairline);
+}
+
+code {
+  background: var(--surface-card);
+  color: var(--tertiary);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+}
+
+pre {
+  background: var(--surface-dark) !important;
+  border: 1px solid var(--surface-dark-elevated);
+  border-radius: var(--radius-lg);
+  color: #faf9f5;
+
+  & > code {
+    color: #faf9f5;
+    border: 0;
+    background: transparent;
+  }
+
+  & > code > [data-line]::before {
+    color: #8e8b82;
+  }
+
+  & > code > [data-line][data-highlighted-line] {
+    background: color-mix(in srgb, #cc785c 18%, transparent);
+    border-left-color: #dc9277;
+  }
+}
+
+figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+  background: var(--surface-dark-elevated);
+  border-color: var(--surface-dark-elevated);
+  color: #faf9f5;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+hr,
+.footnotes {
+  border-color: var(--lightgray);
+}
+
+img,
+audio,
+video,
+.external-embed.youtube,
+iframe.pdf {
+  border-radius: var(--radius-lg);
+}
+
+footer {
+  background: var(--surface-dark);
+  color: #a09d96;
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.6rem;
+  opacity: 1;
+  box-shadow: var(--shadow-hairline);
+
+  & p,
+  & li,
+  & a {
+    color: #d8d2c8;
+  }
+
+  & a:hover {
+    color: #dc9277;
+  }
+}
+
+@media all and ($mobile) {
+  .page > #quartz-body .sidebar.left:has(.explorer) {
+    background: var(--light);
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  .explorer {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .explorer .explorer-content {
+    background: var(--light);
+  }
+
+  .explorer:not(.collapsed) > .explorer-content {
+    border-right: 1px solid var(--lightgray);
+    box-shadow: 12px 0 32px rgba(20, 20, 19, 0.1);
+  }
+
+  .search > .search-container > .search-space {
+    margin-top: 8vh;
+  }
+}
