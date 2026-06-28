@@ -1,6 +1,6 @@
 ---
 title: 码凌书片·121·毕业回来上班了
-description: 
+description: 毕业回来上班了：见证Niko夺冠，试了Pi Agent，还去深圳看输气KTN。
 tags:
 - 周报
 date: 2026-06-28
