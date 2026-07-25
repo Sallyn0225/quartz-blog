@@ -109,6 +109,9 @@ plugins:
     options:
       enableSiteMap: true
       enableRSS: true
+      includeEmptyFiles: false
+      rssLimit: 30
+      rssFullHtml: true
   - source: github:quartz-community/favicon
     enabled: false
   - source: github:quartz-community/og-image
